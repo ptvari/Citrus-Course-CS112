@@ -5,5 +5,8 @@ Pick at random from a list that we propose
 """
 import random
 #This is going to be a list, in other languages they call it arrays
-choices = random.choice(['tat ta rata +4','one knock 2 coughs','ding ding sneeze'])
+choices = ['tat ta rata +4','one knock 2 coughs','ding ding sneeze']
 print(choices)
+print('the pick choice is')
+pick =random.choice(choices)
+print(pick,"!!!!!!")
