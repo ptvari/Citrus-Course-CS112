@@ -5,5 +5,5 @@ Pick at random from a list that we propose
 """
 import random
 #This is going to be a list, in other languages they call it arrays
-choices = random.choice(['No choice'])
+choices = random.choice(['tat ta rata +4','one knock 2 coughs','ding ding sneeze'])
 print(choices)
