@@ -5,5 +5,5 @@ Pick at random from a list that we propose
 """
 import random
 #This is going to be a list, in other languages they call it arrays
-choices = ['No choice']
+choices = random.choice(['No choice'])
 print(choices)
