@@ -10,20 +10,30 @@ choices = ['tat ta rata +4','one knock 2 coughs','ding ding sneeze']
 #These list will be dynamic
 tat_ta,oneknock,ding= [],[],[]
 print('These are the choices buddy!!!!!!:',choices)
-#sample output
-for i in range(10):
+the_input_buddy=int(input("How many times do you wanna run the loop, BUDDY?:"))
+for i in range(the_input_buddy):
     pick=random.choice(choices)
-    #print('the pick choice is:',pick)
     if pick == choices[0]:
         tat_ta.append(pick)
     elif pick == choices[1]:
         oneknock.append(pick)
     else:
         ding.append(pick)
-c=len(tat_ta)
-d=len(oneknock)
-e=len(ding)
+a=len(tat_ta)
+b=len(oneknock)
+c=len(ding)
+print(a,b,c)
+winner = max(a,b,c)
+if winner == a:
+    print(choices[0])
+elif winner == b:
+    print(choices[1])
+else:
+    print(choices[2])
 
+
+
+"""""
 for x in tat_ta:
     print(c,x)
     c = c +1
@@ -33,6 +43,7 @@ for y in oneknock:
 for z in ding:
     print(e,z)
     e=e+1
+"""""
 
 
 """
