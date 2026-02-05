@@ -6,11 +6,17 @@ Pick at random from a list that we propose
 import random
 #This is going to be a list, in other languages they call it arrays
 #This is a static list so far buddy hard coded.
-choices = ['tat ta rata +4','one knock 2 coughs','ding ding sneeze']
-#These list will be dynamic
-tat_ta,oneknock,ding= [],[],[]
-print('These are the choices buddy!!!!!!:',choices)
-the_input_buddy=int(input("How many times do you wanna run the loop, BUDDY?:"))
+choices = []
+#set by input choice, type, and number
+choice_value= ''
+while choice_value != 'x':
+    choice_value = input('Enter choices as phases enter x when done ')
+    if choice_value == 'x':
+        break
+    choices.append(choice_value)
+    print('These are the choices buddy!!!!!!: ', choices)
+tat_ta,oneknock,ding=[],[],[]
+the_input_buddy=int(input("How many times do you wanna run the loop, BUDDY?: "))
 for i in range(the_input_buddy):
     pick=random.choice(choices)
     if pick == choices[0]:
