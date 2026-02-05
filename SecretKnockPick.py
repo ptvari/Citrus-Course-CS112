@@ -6,6 +6,10 @@ Pick at random from a list that we propose
 import random
 #This is going to be a list, in other languages they call it arrays
 #This is a static list so far buddy hard coded.
+#This is my function
+def choice_buddy_picker():
+    pass
+
 choices = []
 #set by input choice, type, and number
 choice_value= ''
