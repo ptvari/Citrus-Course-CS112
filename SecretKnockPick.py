@@ -25,11 +25,11 @@ c=len(ding)
 print(a,b,c)
 winner = max(a,b,c)
 if winner == a:
-    print(choices[0])
+    print('this one wins buddy:',choices[0])
 elif winner == b:
-    print(choices[1])
+    print('this one wins buddy:',choices[1])
 else:
-    print(choices[2])
+    print('this one wins buddy:',choices[2])
 
 
 
