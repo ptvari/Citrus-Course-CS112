@@ -30,17 +30,18 @@ def choice_buddy_picker(random_items,best_outta):
         return winner, choices[1]
     else:
      return winner, choices[2]
-choice_value= ''
-choices = []
-while choice_value != 'x':
-    choice_value = input('Enter choices as phases enter x when done ')
-    if choice_value == 'x':
-        break
+    choice_value=''
+    choices = []
+    while choice_value != 'x':
+        choice_value = input('Enter choices as phases enter x when done ')
+        if choice_value == 'x':
+            break
     choices.append(choice_value)
     print('These are the choices buddy!!!!!!: ', choices)
 
-winning_number,option = choice_buddy_picker(choices,10000)
-print(winning_number,option)
+    winning_number,option = choice_buddy_picker(choices,10000)
+    print(winning_number,option)
+    return 
 
 
 
