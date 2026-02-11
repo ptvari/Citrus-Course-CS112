@@ -41,7 +41,7 @@ def choice_buddy_picker(random_items,best_outta):
 
     winning_number,option = choice_buddy_picker(choices,10000)
     print(winning_number,option)
-    return 
+    return
 
 
 
