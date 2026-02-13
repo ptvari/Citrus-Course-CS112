@@ -9,17 +9,24 @@ from SecretKnockPick import choice_buddy_picker
 #tk gui requires a root
 
 root1=tk.Tk()
+
 #place a frame for the input widgets
 root1.title("The Offical Secret Nock Picker!")
 inputFrame= tk.Frame(root1,width=200,height=100,bg='light blue')
 title_label= tk.Label(root1, text='The Offical Secret Nock Picker!')
 title_label.pack(pady=10)
-
-inputFrame.pack()
+def on_button_click():
+    print("Button clicked! A function was executed.") # This prints to the console
+button = tk.Button(
+    root1,
+    text="Add",
+    command=on_button_click
+)
+button.pack(pady=50)
+inputFrame2= tk.Frame(root1, bg='light pink', width=200, height=50)
+inputFrame2.pack()
 secretknock = choice_buddy_picker(random_items=['tat_ta','ding'],best_outta=11)
 formatOutString = 'The secret knock was {} ' .format(secretknock)
 
 #makes your window loop
-label = tk.Label(inputFrame, text=formatOutString, bg='red')
-label.grid(row=0,column=0,padx=10,pady=10)
-root1.mainloop() 
+root1.mainloop()
