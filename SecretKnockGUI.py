@@ -9,18 +9,23 @@ from SecretKnockPick import choice_buddy_picker
 #tk gui requires a root
 
 root1=tk.Tk()
-root1.geometry("200x100")
+root1.geometry("300x300")
 #title of gui
 root1.title("The Offical Secret Nock Picker!")
 title_label= tk.Label(root1, text='The Offical Secret Nock Picker!', bg='light blue')
 title_label.pack(pady=20)
 
 
-#first frame for entry
-entryFrame= tk.Frame(root1,width=400,height=400,bg='light blue')
-entryFrame.pack()
-entry = tk.Entry(entryFrame, width=25, font=("Times New Roman", 12))
-entry.grid(row=0,column=2)
+#first frame for border for entry frame
+borderframe= tk.Frame(root1,padx=50, pady=50, bg="blue")
+borderframe.pack(pady=50)
+title=tk.Label(borderframe, text='Please enter objects to pull from random picker!', pady=20, padx=20)
+title.pack()
+#second frame for entry and button
+#entryFrame= tk.Frame(root1,width=200,height=200,bg='red')
+#entryFrame.pack()
+entry = tk.Entry(borderframe, width=25, font=("Times New Roman", 12))
+entry.pack()
 
 
 '''
