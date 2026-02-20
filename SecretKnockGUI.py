@@ -41,17 +41,19 @@ buttonadd = tk.Button(
     text="Add",
     command=list_adder
 )
+
+def run_da_picker():
+    if items_list:
+        secretknock = choice_buddy_picker(random_items=items_list, best_outta=100)
+        formatOutString = 'The secret knock was {} '.format(secretknock)
+
 def on_start_click():
     print("Machine is alive!!!")
 buttonstart=tk.Button(
     borderframe,
     text="Start!",
-    command=on_start_click
+    command=run_da_picker
 )
-def run_da_picker():
-    if items_list:
-        secretknock = choice_buddy_picker(random_items=items_list, best_outta=100)
-        formatOutString = 'The secret knock was {} '.format(secretknock)
 buttonadd.pack(side="left", padx=5)
 buttonstart.pack(side="right", padx=5)
 
