@@ -9,7 +9,7 @@ from SecretKnockPick import choice_buddy_picker
 #tk gui requires a root
 
 root1=tk.Tk()
-root1.geometry("300x300")
+root1.geometry("450x350")
 #title of gui
 root1.title("The Offical Secret Nock Picker!")
 title_label= tk.Label(root1, text='The Offical Secret Nock Picker!', bg='light blue')
@@ -17,29 +17,43 @@ title_label.pack(pady=20)
 
 
 #first frame for border for entry frame
-borderframe= tk.Frame(root1,padx=50, pady=50, bg="blue")
-borderframe.pack(pady=50)
-title=tk.Label(borderframe, text='Please enter objects to pull from random picker!', pady=20, padx=20)
+borderframe= tk.Frame(root1,padx=40, pady=40, bg="blue")
+borderframe.pack(pady=40)
+title=tk.Label(borderframe, text='Please enter objects to pull from random picker!', pady=5, padx=5, width=35)
 title.pack()
-#second frame for entry and button
-#entryFrame= tk.Frame(root1,width=200,height=200,bg='red')
-#entryFrame.pack()
-entry = tk.Entry(borderframe, width=25, font=("Times New Roman", 12))
-entry.pack()
+entry = tk.Entry(borderframe, width=30, font=("Times New Roman", 12))
+entry.pack(pady=10)
+#This will be th global list adder
+items_list=[]
+def list_adder():
+    user_input= entry.get()
+    if user_input != "":
+        items_list.append(user_input)  # add to list
+        title.config(text="Items: " + ", ".join(items_list))
+        print("Option was added")
+        print(f"Added: {user_input}")  # show what was added
+        print("Full list:", items_list)  # show full list in terminal
+        entry.delete(0, tk.END)  # clear the box after adding
 
 
-'''
-def on_button_click():
-    print("Button clicked! A function was executed.") # This prints to the console
-button = tk.Button(
-    inputFrame,
+buttonadd = tk.Button(
+    borderframe,
     text="Add",
-    command=on_button_click
+    command=list_adder
 )
-button.grid()
-'''
-secretknock = choice_buddy_picker(random_items=['tat_ta','ding'],best_outta=11)
-formatOutString = 'The secret knock was {} ' .format(secretknock)
+def on_start_click():
+    print("Machine is alive!!!")
+buttonstart=tk.Button(
+    borderframe,
+    text="Start!",
+    command=on_start_click
+)
+def run_da_picker():
+    if items_list:
+        secretknock = choice_buddy_picker(random_items=items_list, best_outta=100)
+        formatOutString = 'The secret knock was {} '.format(secretknock)
+buttonadd.pack(side="left", padx=5)
+buttonstart.pack(side="right", padx=5)
 
 #makes your window loop
 root1.mainloop()
