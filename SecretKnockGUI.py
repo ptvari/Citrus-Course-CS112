@@ -48,7 +48,7 @@ buttonadd = tk.Button(
 #This runs the picker by using the global list from before
 def run_da_picker():
     if items_list:
-        secretknock = choice_buddy_picker(random_items=items_list, best_outta=100)
+        secretknock = choice_buddy_picker(random_items=items_list, best_outta=1000)
         print("Machine is alive!!!")
         formatOutString = 'The secret knock was {} '.format(secretknock)
         print(formatOutString)
